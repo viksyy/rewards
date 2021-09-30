@@ -1,0 +1,17 @@
+{
+    "presets": ["module:metro-react-native-babel-preset"],
+    "plugins": [
+      ["module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "@screens": "./src/screens",
+          "@interfaces": "./src/shared/interfaces",
+          "@utils": "./src/shared/utils",
+          "@assets": "./src/shared/assets",
+          "@helpers": "./src/shared/helpers",
+          "@state": "./src/state",
+          "@services": "./src/services"
+        }
+      }]
+    ]
+  }
