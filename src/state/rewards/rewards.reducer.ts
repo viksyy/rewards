@@ -1,6 +1,6 @@
-import { isRewardCollected } from '@helpers';
+import { CollectRewardAction, REWARDS_ACTION_TYPES, RewardsAction } from './rewards.types';
 import { RewardsState } from '@state/types';
-import { REWARDS_ACTION_TYPES, RewardsAction, CollectRewardAction } from './rewards.types';
+import { isRewardCollected } from '@helpers';
 
 export const initialState: RewardsState = {
 	rewards: [],

@@ -1,5 +1,5 @@
 import thunk from 'redux-thunk';
-import { combineReducers, applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 
 import { rewardsReducer } from './rewards/rewards.reducer';
 

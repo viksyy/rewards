@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 
+import { CollectRewardAction, LoadRewardsAction, LoadRewardsFailAction, LoadRewardsSuccessAction, REWARDS_ACTION_TYPES } from './rewards.types';
 import { Reward } from '@interfaces';
-import { REWARDS_ACTION_TYPES, CollectRewardAction, LoadRewardsAction, LoadRewardsSuccessAction, LoadRewardsFailAction } from './rewards.types';
 import { rewardsService } from '@services';
 
 // internal actions

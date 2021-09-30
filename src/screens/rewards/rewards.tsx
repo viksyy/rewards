@@ -1,12 +1,12 @@
+import React, { useEffect, useState } from 'react';
+import { AppState } from '@state/types';
+import { Colors, GlobalStyles } from '@utils';
+import { FlatList, Image, RefreshControl, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Reward } from '@interfaces';
 import { collectReward, getAllRewards } from '@state/rewards/rewards.actions';
-import { AppState } from '@state/types';
-import React, { useEffect, useState } from 'react';
-import { FlatList, Image, RefreshControl, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { Colors, GlobalStyles } from '@utils';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { isRewardCollected } from '@helpers';
+import { useDispatch, useSelector } from 'react-redux';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export const RewardsScreen = () => {
 	const dispatch = useDispatch();
@@ -104,121 +104,121 @@ export const RewardsScreen = () => {
 };
 
 const styles = StyleSheet.create({
-	safeAreaView: {
-		flex: 1,
+	backView: {
 		backgroundColor: Colors.GrayLight,
+	},
+	badgeImage: {
+		height: 75,
+		width: 75,
+	},
+	badgeText: {
+		textAlign: 'center',
+		width: 100,
+	},
+	badgeView: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		margin: 5,
+		paddingBottom: 10,
+	},
+	collectedView: {
+		...GlobalStyles.ShadowTop,
+		backgroundColor: Colors.OrangeLight,
+		position: 'absolute',
+		width: '100%',
+	},
+	emptyFlatList: {
+		flexGrow: 1,
+		justifyContent: 'center',
+	},
+	emptySpaceOpenCollected: {
+		paddingBottom: 160,
+	},
+	emptyText: {
+		textAlign: 'center',
 	},
 	growView: {
 		flexGrow: 1,
 	},
-	backView: {
-		backgroundColor: Colors.GrayLight,
-	},
-	rewardCardView: {
-		...GlobalStyles.Shadow,
-		flex: 1,
-		backgroundColor: Colors.White,
-		margin: 5,
-		borderLeftWidth: 10,
-		padding: 20,
-		borderRadius: 4,
-		position: 'relative',
-	},
-	rewardTitle: {
-		fontWeight: 'bold',
-		fontSize: 18,
-		width: '90%',
-	},
-	rewardPointsView: {
-		position: 'absolute',
-		right: 0,
-		backgroundColor: Colors.Black,
-		height: 35,
-		width: 55,
-		justifyContent: 'center',
+	headerCollected: {
 		alignItems: 'center',
-		borderTopRightRadius: 4,
+		backgroundColor: Colors.Black,
+		justifyContent: 'center',
+		padding: 10,
 	},
-	rewardPoints: {
+	headerCollectedText: {
 		color: Colors.White,
 		fontWeight: 'bold',
 	},
-	pictureView: {
-		width: 100,
-		height: 100,
-		borderWidth: 2,
-		margin: 5,
-		borderColor: Colors.Orange,
-		borderRadius: 10,
-	},
-	rewardEmptyView: {
-		height: 30,
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	rewardEmptyText: {
-		fontStyle: 'italic',
-		color: Colors.Gray,
-	},
-	rewardCollectButton: {
-		...GlobalStyles.Shadow,
-		width: '100%',
-		backgroundColor: Colors.Orange,
-		height: 45,
-		borderRadius: 10,
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginVertical: 20,
-	},
-	rewardCollectButtonText: {
+	headerItemText: {
+		fontSize: 18,
 		fontWeight: 'bold',
 	},
 	headerItemView: {
 		paddingHorizontal: 20,
 		paddingVertical: 10,
 	},
-	headerItemText: {
-		fontSize: 18,
+	pictureView: {
+		borderColor: Colors.Orange,
+		borderRadius: 10,
+		borderWidth: 2,
+		height: 100,
+		margin: 5,
+		width: 100,
+	},
+	rewardCardView: {
+		...GlobalStyles.Shadow,
+		backgroundColor: Colors.White,
+		borderLeftWidth: 10,
+		borderRadius: 4,
+		flex: 1,
+		margin: 5,
+		padding: 20,
+		position: 'relative',
+	},
+	rewardCollectButton: {
+		...GlobalStyles.Shadow,
+		alignItems: 'center',
+		backgroundColor: Colors.Orange,
+		borderRadius: 10,
+		height: 45,
+		justifyContent: 'center',
+		marginVertical: 20,
+		width: '100%',
+	},
+	rewardCollectButtonText: {
 		fontWeight: 'bold',
 	},
-	emptySpaceOpenCollected: {
-		paddingBottom: 160,
+	rewardEmptyText: {
+		color: Colors.Gray,
+		fontStyle: 'italic',
 	},
-	emptyFlatList: {
-		flexGrow: 1,
-		justifyContent: 'center',
-	},
-	emptyText: {
-		textAlign: 'center',
-	},
-	collectedView: {
-		...GlobalStyles.ShadowTop,
-		position: 'absolute',
-		width: '100%',
-		backgroundColor: Colors.OrangeLight,
-	},
-	headerCollected: {
-		backgroundColor: Colors.Black,
-		padding: 10,
-		justifyContent: 'center',
+	rewardEmptyView: {
 		alignItems: 'center',
+		height: 30,
+		justifyContent: 'center',
 	},
-	headerCollectedText: {
+	rewardPoints: {
 		color: Colors.White,
 		fontWeight: 'bold',
 	},
-	badgeView: {
-		margin: 5,
-		justifyContent: 'center',
+	rewardPointsView: {
 		alignItems: 'center',
-		paddingBottom: 10,
+		backgroundColor: Colors.Black,
+		borderTopRightRadius: 4,
+		height: 35,
+		justifyContent: 'center',
+		position: 'absolute',
+		right: 0,
+		width: 55,
 	},
-	badgeImage: {
-		width: 75,
-		height: 75,
+	rewardTitle: {
+		fontSize: 18,
+		fontWeight: 'bold',
+		width: '90%',
 	},
-	badgeText: {
-		width: 100,
-		textAlign: 'center',
+	safeAreaView: {
+		backgroundColor: Colors.GrayLight,
+		flex: 1,
 	},
 });
