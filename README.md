@@ -19,27 +19,27 @@ Setup a basic React Native app on your system: https://reactnative.dev/
 ### Android
 
 <p float="left">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/android1.png" width="270" alt="Screenshot 1">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/android2.png" width="270" alt="Screenshot 2">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/android3.png" width="270" alt="Screenshot 3">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/android4.png" width="270" alt="Screenshot 4">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/android1.png" width="270" alt="Screenshot 1">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/android2.png" width="270" alt="Screenshot 2">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/android3.png" width="270" alt="Screenshot 3">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/android4.png" width="270" alt="Screenshot 4">
 </p>
 
 
 ### iOS
 
 <p float="left">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/ios1.png" width="270" alt="Screenshot ios 1">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/ios2.png" width="270" alt="Screenshot ios 2">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/ios3.png" width="270" alt="Screenshot ios 3">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/ios4.png" width="270" alt="Screenshot ios 4">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/ios1.png" width="270" alt="Screenshot ios 1">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/ios2.png" width="270" alt="Screenshot ios 2">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/ios3.png" width="270" alt="Screenshot ios 3">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/ios4.png" width="270" alt="Screenshot ios 4">
 </p>
 
 ### Animated GIF
 
 
 <p float="left">
-    <img src="https://github.com/viktorspasevski/fleet-management/blob/main/git-images/ios-video.gif" width="270" alt="GIF iOS">
+    <img src="https://github.com/viktorspasevski/rewards/blob/main/git-images/ios-video.gif" width="270" alt="GIF iOS">
 </p>
 
 ## Main technologies used
