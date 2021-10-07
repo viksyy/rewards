@@ -13,7 +13,7 @@ export const RewardsScreen = () => {
 	const { rewards, loading, collectedRewards } = useSelector((state: AppState) => state.rewards);
 	const inset = useSafeAreaInsets();
 
-	const [collectedOpen, isCollectedOpen] = useState(true);
+	const [collectedOpen, setCollectedOpen] = useState(true);
 
 	useEffect(() => {
 		dispatch(getAllRewards());
@@ -82,7 +82,7 @@ export const RewardsScreen = () => {
 			/>
 			{collectedRewards.length > 0 && (
 				<View style={[styles.collectedView, { height: collectedOpen ? 150 : 36, bottom: inset.bottom }]}>
-					<TouchableOpacity activeOpacity={0.8} onPress={() => isCollectedOpen(!collectedOpen)} style={styles.headerCollected}>
+					<TouchableOpacity activeOpacity={0.8} onPress={() => setCollectedOpen(!collectedOpen)} style={styles.headerCollected}>
 						<Text style={styles.headerCollectedText}>{'COLLECTED REWARDS'}</Text>
 					</TouchableOpacity>
 					<FlatList

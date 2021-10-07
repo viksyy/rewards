@@ -14,7 +14,7 @@ export const collectReward = (payload: Reward): CollectRewardAction => ({ type: 
 
 export const getAllRewards = () => (dispatch: Dispatch) => {
 	dispatch(loadRewards());
-	rewardsService
+	return rewardsService
 		.getRewards()
 		.then((response: Reward[]) => dispatch(loadRewardsSuccess(response)))
 		.catch((error: Error) => dispatch(loadRewardsFail(error.message)));
